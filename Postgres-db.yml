@@ -1,0 +1,7 @@
+db: # Este es el nombre del servicio (tu postgres-db)
+    image: postgres:16.0 # Le dice a Docker que descargue el software oficial de Postgres
+    container_name: db   # El nombre que tendrá el "contenedor" al estar encendido
+    environment:         # Aquí configuramos las "llaves" de acceso:
+      - POSTGRES_DB=odoo        # Crea una base de datos llamada 'odoo'
+      - POSTGRES_PASSWORD=odoo  # Pone una contraseña (en este caso, 'odoo')
+      - POSTGRES_USER=odoo      # Crea un usuario llamado 'odoo'
